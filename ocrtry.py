@@ -48,7 +48,7 @@ def userinfo(update, context):
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
     update.message.reply_text('Developer : @iLEWDloli\n'
-                               'GitHub  : https://github.com/adenosinetp10'
+                               'GitHub  : https://github.com/adenosinetp10\n'
                                'Coded in Telegram using python-telegram-bot Wrapper\n'
                                'Hosted with ❤ in Heroku(Free account)\n'
                                'Wanna buy me a CUP of COFFEE?\nDonate Here-->https://paypal.me/adenosinetp10')
