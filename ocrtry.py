@@ -48,9 +48,8 @@ def userinfo(update, context):
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
-    about_keys = [InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),
-                    InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]
-    reply_markup = InlineKeyboardMarkup(about_keys)
+    keyboard = [[InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text('Developer : @iLEWDloli\n'
                                'Coded in Telegram using python-telegram-bot Wrapper\n'
                                'Hosted with ❤ in Heroku(Free account)\n'
