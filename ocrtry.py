@@ -48,13 +48,14 @@ def userinfo(update, context):
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
-    about_keys = [InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]
+    about_keys = [InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),
+                    InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]
+    reply_markup = InlineKeyboardMarkup(about_keys)
     update.message.reply_text('Developer : @iLEWDloli\n'
                                'Coded in Telegram using python-telegram-bot Wrapper\n'
                                'Hosted with ❤ in Heroku(Free account)\n'
-                               'Wanna buy me a CUP of COFFEE?\nDonate!')
-
-    creatkeyboard = InlineKeyboardMarkup(about_keys)
+                               'Wanna buy me a CUP of COFFEE?\nDonate!',reply_markup = reply_markup)
+    
 
 #Defining MessangleHandler that will do this function when a Image is Sent, THIS IS THE MAIN FUCNTION FOR THE OCR THINGY!!
 def receive(update,context):
