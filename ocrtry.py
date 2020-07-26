@@ -1,6 +1,7 @@
 #This is an experimental OCR bot for telegram using the python-telegram-bot Wrapper and an Open Source API for OCR found on the Internet
 #Importing every shit that gonna be used..
 from telegram.ext import CommandHandler,Updater,MessageHandler,Filters
+from telegram import InlineKeyboardButton,InlineKeyboardMarkup
 import cloudmersive_ocr_api_client
 from cloudmersive_ocr_api_client.rest import ApiException
 from traceback import print_exc
@@ -47,11 +48,13 @@ def userinfo(update, context):
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
+    about_keys = [InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]
     update.message.reply_text('Developer : @iLEWDloli\n'
-                               'GitHub  : https://github.com/adenosinetp10\n'
                                'Coded in Telegram using python-telegram-bot Wrapper\n'
                                'Hosted with ❤ in Heroku(Free account)\n'
-                               'Wanna buy me a CUP of COFFEE?\nDonate Here-->https://paypal.me/adenosinetp10')
+                               'Wanna buy me a CUP of COFFEE?\nDonate!')
+
+    creatkeyboard = InlineKeyboardMarkup(about_keys)
 
 #Defining MessangleHandler that will do this function when a Image is Sent, THIS IS THE MAIN FUCNTION FOR THE OCR THINGY!!
 def receive(update,context):
