@@ -2,6 +2,7 @@
 #Importing every shit that gonna be used..
 from telegram.ext import CommandHandler,Updater,MessageHandler,Filters
 from telegram import InlineKeyboardButton,InlineKeyboardMarkup
+import telegram
 import cloudmersive_ocr_api_client
 from cloudmersive_ocr_api_client.rest import ApiException
 from traceback import print_exc
@@ -70,7 +71,7 @@ def receive(update,context):
         api_response = api_instance.image_ocr_post(filename)
         sucs_percent = api_response.mean_confidence_level
         result = api_response.text_result
-        update.message.reply_text("Success Percentage : "+str(sucs_percent*100)+"%\nThe text from the Image : \n"+str(result))
+        update.message.reply_text("Success Percentage : "+str(sucs_percent*100)+"%\nThe text from the Image : \n"'```'+str(result)+'```', parse_mode = 'MarkdownV2')
     except Exception as e:
         print_exc
         update.message.reply_text("Gomen! Error Occured.\nError Details : "+str(e))
