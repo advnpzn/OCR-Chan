@@ -40,6 +40,11 @@ def userinfo(update, context):
     usrname = update.message.from_user.username
     langcode = update.message.from_user.language_code
     dt = update.message.date
+    String fname,lname,uniqid,usrname,langcode,dt = toEscapeMsg
+    .replace("_", "\\_")
+    .replace("*", "\\*")
+    .replace("[", "\\[")
+    .replace("`", "\\`");
     update.message.reply_text('*Unique ID :* ''```'+str(uniqid)+'```'
                                 '\n*First Name :* ''```'+str(fname)+'```'
                                 '\n*Last Name :* ''```'+str(lname)+'```'
@@ -51,10 +56,10 @@ def userinfo(update, context):
 def about(update, context):
     keyboard = [[InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text('*Developer : *@iLEWDloli\n'
+    update.message.reply_text('*Developer : *\@iLEWDloli\n'
                                'Coded in Telegram using *python\-telegram\-bot* Wrapper\n'
-                               'Hosted with ❤ in Heroku(Free account)\n'
-                               'Wanna buy me a CUP of COFFEE?\nDonate\!',reply_markup = reply_markup,parse_mode='MarkdownV2')
+                               'Hosted with ❤ in Heroku\(Free account\)\n'
+                               'Wanna buy me a CUP of COFFEE\?\nDonate\!',reply_markup = reply_markup,parse_mode='MarkdownV2')
     
 
 #Defining MessangleHandler that will do this function when a Image is Sent, THIS IS THE MAIN FUCNTION FOR THE OCR THINGY!!
