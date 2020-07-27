@@ -40,12 +40,12 @@ def userinfo(update, context):
     usrname = update.message.from_user.username
     langcode = update.message.from_user.language_code
     dt = update.message.date
-    update.message.reply_text('Unique ID : '+str(uniqid)+
+    update.message.reply_text('<b>Unique ID :</b> '+str(uniqid)+
                                 '\nFirst Name : '+str(fname)+
                                 '\nLast Name : '+str(lname)+
                                 '\nUser Name : @'+str(usrname)+
                                 '\nLanguage Code : '+str(langcode)+
-                                '\nDate & Time : '+str(dt))
+                                '\nDate & Time : '+str(dt),parse_mode='HTML')
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
