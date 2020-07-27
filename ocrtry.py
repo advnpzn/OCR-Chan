@@ -23,7 +23,7 @@ def help(update,context):
 #Defining /start command 
 def chatid(update,context):
     chatid = update.message.chat_id
-    update.message.reply_text("*Chat ID :* "'```'+str(chatid)+'```',parse_mode='MarkdownV2')
+    update.message.reply_text("Chat ID : "+str(chatid))
 
 #Defining ECHO command incase the person starts to have a convo with the bot like a TRUE SIMP
 def nanikore(update,context):
@@ -40,26 +40,21 @@ def userinfo(update, context):
     usrname = update.message.from_user.username
     langcode = update.message.from_user.language_code
     dt = update.message.date
-    String fname,lname,uniqid,usrname,langcode,dt = toEscapeMsg
-    .replace("_", "\\_")
-    .replace("*", "\\*")
-    .replace("[", "\\[")
-    .replace("`", "\\`");
-    update.message.reply_text('*Unique ID :* ''```'+str(uniqid)+'```'
-                                '\n*First Name :* ''```'+str(fname)+'```'
-                                '\n*Last Name :* ''```'+str(lname)+'```'
-                                '\n*User Name :* ```@```''```'+str(usrname)+'```'
-                                '\n*Language Code :* ''```'+str(langcode)+'```'
-                                '\n*Date & Time :* ''```'+str(dt)+'```',parse_mode='MarkdownV2')
+    update.message.reply_text('Unique ID : '+str(uniqid)+
+                                '\nFirst Name : '+str(fname)+
+                                '\nLast Name : '+str(lname)+
+                                '\nUser Name : @'+str(usrname)+
+                                '\nLanguage Code : '+str(langcode)+
+                                '\nDate & Time : '+str(dt))
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
     keyboard = [[InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text('*Developer : *\@iLEWDloli\n'
-                               'Coded in Telegram using *python\-telegram\-bot* Wrapper\n'
-                               'Hosted with ❤ in Heroku\(Free account\)\n'
-                               'Wanna buy me a CUP of COFFEE\?\nDonate\!',reply_markup = reply_markup,parse_mode='MarkdownV2')
+    update.message.reply_text('Developer : @iLEWDloli\n'
+                               'Coded in Telegram using python-telegram-bot Wrapper\n'
+                               'Hosted with ❤ in Heroku(Free account)\n'
+                               'Wanna buy me a CUP of COFFEE?\nDonate!',reply_markup = reply_markup)
     
 
 #Defining MessangleHandler that will do this function when a Image is Sent, THIS IS THE MAIN FUCNTION FOR THE OCR THINGY!!
