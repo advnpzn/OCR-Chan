@@ -40,21 +40,21 @@ def userinfo(update, context):
     usrname = update.message.from_user.username
     langcode = update.message.from_user.language_code
     dt = update.message.date
-    update.message.reply_text('<b>Unique ID :</b> '+str(uniqid)+
-                                '\nFirst Name : '+str(fname)+
-                                '\nLast Name : '+str(lname)+
-                                '\nUser Name : @'+str(usrname)+
-                                '\nLanguage Code : '+str(langcode)+
-                                '\nDate & Time : '+str(dt),parse_mode='HTML')
+    update.message.reply_text('<b>Unique ID :</b> ''<pre>'+str(uniqid)+'</pre>'
+                                '\n<b>First Name :</b> ''<pre>'+str(fname)+'</pre>'
+                                '\n<b>Last Name :</b> ''<pre>'+str(lname)+'</pre>'
+                                '\n<b>User Name :</b>' '<pre>'@'</pre>''<pre>'+str(usrname)+'</pre>'
+                                '\n<b>Language Code :</b> ''<pre>'+str(langcode)+'</pre>'
+                                '\n<b>Date & Time :</b> ''<pre>'+str(dt)'</pre>',parse_mode='HTML')
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
     keyboard = [[InlineKeyboardButton('GitHub',url ="https://github.com/adenosinetp10"),InlineKeyboardButton('Paypal',url='https://paypal.me/adenosinetp10')]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text('Developer : @iLEWDloli\n'
-                               'Coded in Telegram using python-telegram-bot Wrapper\n'
+    update.message.reply_text('<b>Developer :</b> @iLEWDloli\n'
+                               'Coded in Telegram using <b>python-telegram-bot</b> Wrapper\n'
                                'Hosted with ❤ in Heroku(Free account)\n'
-                               'Wanna buy me a CUP of COFFEE?\nDonate!',reply_markup = reply_markup)
+                               'Wanna buy me a CUP of COFFEE?\nDonate!',reply_markup = reply_markup,parse_mode='HTML')
     
 
 #Defining MessangleHandler that will do this function when a Image is Sent, THIS IS THE MAIN FUCNTION FOR THE OCR THINGY!!
@@ -74,7 +74,7 @@ def receive(update,context):
         update.message.reply_text("<b>Success Percentage :</b> "+str(sucs_percent*100)+"<b>%\nThe text from the Image :</b> \n"'<pre>'+str(result)+'</pre>', parse_mode = 'HTML')
     except Exception as e:
         print_exc
-        update.message.reply_text("Gomen! Error Occured.\nError Details : "+str(e))
+        update.message.reply_text("Gomen! Error Occured.\n<b>Error Details :</b> "+str(e),parse_mode='HTML')
 
 #AS USUAL THE MAIN FUNCTION MEHHHHHH
 def main():
