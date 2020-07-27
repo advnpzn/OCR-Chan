@@ -45,7 +45,7 @@ def userinfo(update, context):
                                 '\n<b>Last Name :</b> ''<pre>'+str(lname)+'</pre>'
                                 '\n<b>User Name :</b>' '<pre>'@'</pre>''<pre>'+str(usrname)+'</pre>'
                                 '\n<b>Language Code :</b> ''<pre>'+str(langcode)+'</pre>'
-                                '\n<b>Date & Time :</b> ''<pre>'+str(dt)'</pre>',parse_mode='HTML')
+                                '\n<b>Date & Time :</b> ''<pre>'+str(dt)+'</pre>',parse_mode='HTML')
 
 #Defining /about command to give USERS some info about me, but GUYS donate me I'm a student and I'm broke AF    
 def about(update, context):
