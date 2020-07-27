@@ -23,7 +23,7 @@ def help(update,context):
 #Defining /start command 
 def chatid(update,context):
     chatid = update.message.chat_id
-    update.message.reply_text("Chat ID : "+str(chatid))
+    update.message.reply_text("<b>Chat ID :</b> "'<pre>'+str(chatid)+'</pre>',parse_mode='HTML')
 
 #Defining ECHO command incase the person starts to have a convo with the bot like a TRUE SIMP
 def nanikore(update,context):
@@ -40,7 +40,7 @@ def userinfo(update, context):
     usrname = update.message.from_user.username
     langcode = update.message.from_user.language_code
     dt = update.message.date
-    update.message.reply_text('<b>Unique ID :</b> ''<pre>'+str(uniqid)+'</pre>'
+    update.message.reply_text('<b>Unique ID/Chat ID :</b> ''<pre>'+str(uniqid)+'</pre>'
                                 '\n<b>First Name :</b> ''<pre>'+str(fname)+'</pre>'
                                 '\n<b>Last Name :</b> ''<pre>'+str(lname)+'</pre>'
                                 '\n<b>User Name :</b>' '<pre>@</pre>''<pre>'+str(usrname)+'</pre>'
