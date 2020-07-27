@@ -71,7 +71,7 @@ def receive(update,context):
         api_response = api_instance.image_ocr_post(filename)
         sucs_percent = api_response.mean_confidence_level
         result = api_response.text_result
-        update.message.reply_text("<b>Success Percentage \:</b> "+str(sucs_percent*100)+"<b>%\nThe text from the Image \:</b> \n"+str(result), parse_mode = 'HTML')
+        update.message.reply_text("<b>Success Percentage :</b> "+str(sucs_percent*100)+"<b>%\nThe text from the Image :</b> \n"'<pre>'+str(result)+'</pre>', parse_mode = 'HTML')
     except Exception as e:
         print_exc
         update.message.reply_text("Gomen! Error Occured.\nError Details : "+str(e))
