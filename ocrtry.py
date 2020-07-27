@@ -43,7 +43,7 @@ def userinfo(update, context):
     update.message.reply_text('<b>Unique ID :</b> ''<pre>'+str(uniqid)+'</pre>'
                                 '\n<b>First Name :</b> ''<pre>'+str(fname)+'</pre>'
                                 '\n<b>Last Name :</b> ''<pre>'+str(lname)+'</pre>'
-                                '\n<b>User Name :</b>' '<pre>'@'</pre>''<pre>'+str(usrname)+'</pre>'
+                                '\n<b>User Name :</b>' '<pre>@</pre>''<pre>'+str(usrname)+'</pre>'
                                 '\n<b>Language Code :</b> ''<pre>'+str(langcode)+'</pre>'
                                 '\n<b>Date & Time :</b> ''<pre>'+str(dt)+'</pre>',parse_mode='HTML')
 
