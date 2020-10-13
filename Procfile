@@ -1,1 +1,1 @@
-web: python3 ocrtry.py
+worker: python3 ocrtry.py
