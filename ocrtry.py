@@ -16,11 +16,11 @@ def start(update,context):
     fname = update.message.from_user.first_name
     update.message.reply_text("Hi %s, if you are stuck or don't know what to do,\nTry doing /help to look out for all available commands."%(fname))
 
-#Defining /start command 
+#Defining /help command 
 def help(update,context):
     update.message.reply_text("Upload a photo which has clear and distinguishable english words.\nThen after confirmation of the image, OCR-chan will automatically\nsend you your text from the picture\n/start   -   Start OCR-chan!\n/help    -   Look for help!\n/userinfo    -   See your Info\n/about   -   About OCR-chan\n/chatid    -   Display the Chat ID")
 
-#Defining /start command 
+#Defining /chatid command 
 def chatid(update,context):
     chatid = update.message.chat_id
     update.message.reply_text("<b>Chat ID :</b> "'<pre>'+str(chatid)+'</pre>',parse_mode='HTML')
