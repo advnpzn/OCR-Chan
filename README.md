@@ -4,4 +4,4 @@ Uses **Telegram API** wrapped by **python-telegram-bot**.
 Using **Cloudmersive OCR API**.
 
 # Clone
->`git clone https://github.com/adenosinetp10/OCR-Chan.git`
+>`git clone https://github.com/notPlasticCat/OCR-Chan.git`
